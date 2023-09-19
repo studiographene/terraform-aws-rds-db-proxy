@@ -65,8 +65,8 @@ data "aws_iam_policy_document" "this" {
 }
 
 module "role_label" {
-  source  = "cloudposse/label/null"
-  version = "0.25.0"
+  source  = "app.terraform.io/studiographene/sg-label/null"
+  version = "1.0.4"
 
   enabled    = local.iam_role_enabled
   attributes = var.iam_role_attributes

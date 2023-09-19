@@ -1,5 +1,5 @@
 module "vpc" {
-  source  = "cloudposse/vpc/aws"
+  source  = "app.terraform.io/studiographene/sg-label/vpc/aws"
   version = "0.28.1"
 
   cidr_block = "172.16.0.0/16"
@@ -8,7 +8,7 @@ module "vpc" {
 }
 
 module "subnets" {
-  source  = "cloudposse/dynamic-subnets/aws"
+  source  = "app.terraform.io/studiographene/sg-label/dynamic-subnets/aws"
   version = "0.39.8"
 
   availability_zones   = var.availability_zones

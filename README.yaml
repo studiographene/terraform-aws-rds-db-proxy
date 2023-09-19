@@ -48,9 +48,10 @@ related:
     description: Terraform module to provision AWS RDS replica instances. These are best suited for reporting purposes.
     url: https://github.com/cloudposse/terraform-aws-rds-replica
   - name: terraform-aws-backup
-    description: Terraform module to provision AWS Backup, a fully managed backup service that makes it easy to centralize and automate
-        the back up of data across AWS services such as Amazon EBS volumes, Amazon EC2 instances, Amazon RDS databases,
-        Amazon DynamoDB tables, Amazon EFS file systems, and AWS Storage Gateway volumes.
+    description:
+      Terraform module to provision AWS Backup, a fully managed backup service that makes it easy to centralize and automate
+      the back up of data across AWS services such as Amazon EBS volumes, Amazon EC2 instances, Amazon RDS databases,
+      Amazon DynamoDB tables, Amazon EFS file systems, and AWS Storage Gateway volumes.
     url: https://github.com/cloudposse/terraform-aws-backup
 
 description: |-
@@ -65,7 +66,7 @@ usage: |2-
 
   ```hcl
   module "vpc" {
-    source  = "cloudposse/vpc/aws"
+    source  = "app.terraform.io/studiographene/sg-label/vpc/aws"
     # Cloud Posse recommends pinning every module to a specific version
     # version = "x.x.x"
 
@@ -75,7 +76,7 @@ usage: |2-
   }
 
   module "subnets" {
-    source  = "cloudposse/dynamic-subnets/aws"
+    source  = "app.terraform.io/studiographene/sg-label/dynamic-subnets/aws"
     # Cloud Posse recommends pinning every module to a specific version
     # version = "x.x.x"
 
@@ -115,7 +116,7 @@ usage: |2-
   }
 
   module "rds_instance" {
-    source  = "cloudposse/rds/aws"
+    source  = "app.terraform.io/studiographene/sg-label/rds/aws"
     # Cloud Posse recommends pinning every module to a specific version
     # version = "x.x.x"
 
@@ -153,7 +154,7 @@ usage: |2-
   }
 
   module "rds_proxy" {
-    source  = "cloudposse/rds-db-proxy/aws"
+    source  = "app.terraform.io/studiographene/sg-label/rds-db-proxy/aws"
     # Cloud Posse recommends pinning every module to a specific version
     # version = "x.x.x"
     db_instance_identifier = module.rds_instance.instance_id

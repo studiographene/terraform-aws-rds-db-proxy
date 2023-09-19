@@ -32,7 +32,7 @@ locals {
 }
 
 module "rds_instance" {
-  source  = "cloudposse/rds/aws"
+  source  = "app.terraform.io/studiographene/sg-label/rds/aws"
   version = "0.38.4"
 
   database_name       = var.database_name
